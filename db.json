@@ -1,0 +1,12 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "John",
+      "position": "Developer",
+      "admission-date": "2019-01-01",
+      "phone": "123456789",
+      "urlImg": ""
+    }
+  ]
+}
