@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import { roboto } from "@/utils/fonts";
-import Header from "@/components/header";
+import Header from "@/components/Header";
+import QueryProvider from "@/core/query-provider";
 
 
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ export default function RootLayout({
         className={`${roboto} antialiased`}
       >
         <Header />
-        {children}
+        <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
   );
