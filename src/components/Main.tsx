@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import List from "@/components/list";
+import List from "@/components/List";
 import MobileList from "@/components/MobileList";
+import Search from "./Search";
 
 export default function Main() {
   const [isMobile, setIsMobile] = useState(false);
@@ -23,6 +24,7 @@ export default function Main() {
 
   return (
     <div>
+        <Search />
       {isMobile ? <MobileList /> : <List />}
     </div>
   );
