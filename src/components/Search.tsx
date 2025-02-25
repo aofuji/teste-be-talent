@@ -1,6 +1,6 @@
 import type { Search } from "@/interfaces/search";
+import Image from "next/image";
 import { useState } from "react";
-
 
 const Search = ({ onSearchChange }: Search) => {
   const [search, setSearch] = useState("");
@@ -12,12 +12,20 @@ const Search = ({ onSearchChange }: Search) => {
   };
 
   return (
-    <div>
+    <div className="relative w-64">
       <input
         type="text"
-        placeholder="Search"
+        placeholder="Pesquisar"
+        className="w-full p-2 pr-10 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400"
         value={search}
         onChange={handleInputChange}
+      />
+      <Image
+        src="/img/search.png"
+        alt="Ícone de pesquisa"
+        width={20}
+        height={20}
+        className="absolute right-3 top-2.5 w-5 h-5"
       />
     </div>
   );

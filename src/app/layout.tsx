@@ -21,8 +21,9 @@ export default function RootLayout({
       <body
         className={`${roboto} antialiased`}
       >
+        <QueryProvider>
         <Header />
-        <QueryProvider>{children}</QueryProvider>
+          {children}</QueryProvider>
       </body>
     </html>
   );
