@@ -1,14 +1,15 @@
 "use client";
 
 import { useState, useEffect, Suspense } from "react";
-import MobileList from "@/components/MobileList";
 import Search from "./Search";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { fetcher } from "@/utils/fetch";
 import { Employee } from "@/interfaces/employees";
 import dynamic from "next/dynamic";
 import SkeletonTable from "./SkeletonTable";
+// lazy loading
 const List = dynamic(() => import("../components/List"), { ssr: false });
+const MobileList = dynamic(() => import("../components/MobileList"), { ssr: false });
 
 export default function Main() {
   const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -58,7 +59,7 @@ export default function Main() {
 
   return (
     <>
-      <div className="flex justify-between items-center p-8">
+      <div className="flex justify-between items-center p-5 mb-3 mt-2">
         <h1>Funcionários</h1>
         <Search onSearchChange={handleSearchChange} />
       </div>
