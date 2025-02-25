@@ -40,7 +40,7 @@ const MobileList = ({ data }: { data: Array<Employee> }) => {
             data.map((employee, index) => (
               <React.Fragment key={index}>
                 <tr
-                  className="border-b border-gray-300 cursor-pointer"
+                  className={`border-b border-gray-300 cursor-pointer ${expandedRows[index] ? 'border-b-0' : ''}`}
                   onClick={() => handleRowClick(index)}
                 >
                   <td className="pl-6 p-2">
