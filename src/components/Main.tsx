@@ -56,7 +56,11 @@ export default function Main() {
 
   return (
     <>
-      <Search onSearchChange={handleSearchChange} />
+    <div className="flex justify-between p-8">
+      <h1>Funcionários</h1>
+    <Search onSearchChange={handleSearchChange} />
+    </div>
+      
       {dataEmployees.isPending && <div>Carregando...</div>}
       {dataEmployees.isError && <div>Ocorreu um erro</div>}
       {dataEmployees.isSuccess && filteredEmployees.length === 0 && (

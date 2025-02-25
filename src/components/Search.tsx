@@ -13,7 +13,6 @@ const Search = ({ onSearchChange }: Search) => {
 
   return (
     <div>
-      <h1>Search</h1>
       <input
         type="text"
         placeholder="Search"
