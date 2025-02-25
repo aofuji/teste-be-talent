@@ -1,12 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import List from "@/components/List";
+import { useState, useEffect, Suspense } from "react";
 import MobileList from "@/components/MobileList";
 import Search from "./Search";
-import { useQuery } from "@tanstack/react-query";
+import { useSuspenseQuery } from "@tanstack/react-query";
 import { fetcher } from "@/utils/fetch";
 import { Employee } from "@/interfaces/employees";
+import dynamic from "next/dynamic";
+import SkeletonTable from "./SkeletonTable";
+const List = dynamic(() => import("../components/List"), { ssr: false });
 
 export default function Main() {
   const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -29,7 +31,7 @@ export default function Main() {
 
   const URL = process.env.NEXT_PUBLIC_BASE_URL! + "/employees";
 
-  const queryEmployees = useQuery({
+  const queryEmployees = useSuspenseQuery({
     queryKey: ["employees"],
     queryFn: () => fetcher(URL),
   });
@@ -64,7 +66,9 @@ export default function Main() {
       {isMobile ? (
         <MobileList data={filteredEmployees} />
       ) : (
-        <List isPeding={queryEmployees.isPending} isError={queryEmployees.isError} data={filteredEmployees} />
+        <Suspense fallback={<SkeletonTable />}>
+          <List data={filteredEmployees} />
+        </Suspense>
       )}
     </>
   );

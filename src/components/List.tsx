@@ -5,7 +5,7 @@ import formatDate from "@/utils/formatDate";
 import formatPhone from "@/utils/formatPhone";
 import Image from "next/image";
 
-const List = ({ data, isPeding, isError }: { data: Array<Employee>, isPeding: boolean, isError: boolean }) => {
+const List = ({ data }: { data: Array<Employee>}) => {
   return (
     <div className="pr-5 pl-5">
       <table className="min-w-full">
@@ -19,15 +19,7 @@ const List = ({ data, isPeding, isError }: { data: Array<Employee>, isPeding: bo
           </tr>
         </thead>
         <tbody className="border bg-white">
-          {isPeding ? (
-            <tr>
-              <td colSpan={5} className="text-center p-2">Carregando...</td>
-            </tr>
-          ) : isError ? (
-            <tr>
-              <td colSpan={5} className="text-center p-2 text-red-500">Ocorreu um erro ao carregar os dados.</td>
-            </tr>
-          ) : data.length === 0 ? (
+          { data.length === 0 ? (
             <tr>
               <td colSpan={5} className="text-center p-2">Nenhum funcionário encontrado.</td>
             </tr>
