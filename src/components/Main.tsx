@@ -29,17 +29,17 @@ export default function Main() {
 
   const URL = process.env.NEXT_PUBLIC_BASE_URL! + "/employees";
 
-  const dataEmployees = useQuery({
+  const queryEmployees = useQuery({
     queryKey: ["employees"],
     queryFn: () => fetcher(URL),
   });
 
   useEffect(() => {
-    if (dataEmployees.isSuccess) {
-      setInitEmployees(dataEmployees.data);
-      setFilteredEmployees(dataEmployees.data);
+    if (queryEmployees.isSuccess) {
+      setInitEmployees(queryEmployees.data);
+      setFilteredEmployees(queryEmployees.data);
     }
-  }, [dataEmployees.isSuccess, dataEmployees.data]);
+  }, [queryEmployees.isSuccess, queryEmployees.data]);
 
   const handleSearchChange = (newSearch: string) => {
     const filtered = initEmployees?.filter((employee) => {
@@ -61,15 +61,10 @@ export default function Main() {
         <Search onSearchChange={handleSearchChange} />
       </div>
 
-      {dataEmployees.isPending && <div>Carregando...</div>}
-      {dataEmployees.isError && <div>Ocorreu um erro</div>}
-      {dataEmployees.isSuccess && filteredEmployees.length === 0 && (
-        <div>Nenhum funcionário encontrado</div>
-      )}
       {isMobile ? (
         <MobileList data={filteredEmployees} />
       ) : (
-        <List data={filteredEmployees} />
+        <List isPeding={queryEmployees.isPending} isError={queryEmployees.isError} data={filteredEmployees} />
       )}
     </>
   );

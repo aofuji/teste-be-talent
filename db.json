@@ -4,9 +4,25 @@
       "id": "1",
       "name": "John",
       "position": "Developer",
-      "admissionDate": "2019-01-01",
-      "phone": "123456789",
-      "urlImg": ""
+      "admissionDate": "2019-03-01",
+      "phone": "5555555555555",
+      "urlImg": "/img/Photo_1.png"
+    },
+    {
+      "id": "2",
+      "name": "Jane",
+      "position": "Designer",
+      "admissionDate": "2019-04-01",
+      "phone": "5534567892222",
+      "urlImg": "/img/Photo_02.png"
+    },
+    {
+      "id": "3",
+      "name": "Doe",
+      "position": "Manager",
+      "admissionDate": "2019-05-01",
+      "phone": "5534567892222",
+      "urlImg": "/img/Photo_03.png"
     }
   ]
 }

@@ -2,7 +2,7 @@ export interface Employee {
     id: number;
     name: string;
     position: string;
-    admissionDate: Date;
+    admissionDate: string;
     phone: string;
     urlImg: string;
 }
