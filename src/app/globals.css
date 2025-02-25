@@ -14,8 +14,8 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--black);
+  background: var(--gray-00);
 }
 
 h1 {
