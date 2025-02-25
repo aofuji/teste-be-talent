@@ -10,7 +10,7 @@ const List = ({ data }: { data: Array<Employee>}) => {
     <div className="pr-5 pl-5">
       <table className="min-w-full">
         <thead>
-          <tr className="bg-blue-700 text-white uppercase">
+          <tr className="bg-blue_primary text-white uppercase">
             <th className="pl-6 p-2 text-left rounded-tl-xl">foto</th>
             <th className="p-2 text-left">nome</th>
             <th className="p-2 text-left">cargo</th>
@@ -25,14 +25,14 @@ const List = ({ data }: { data: Array<Employee>}) => {
             </tr>
           ) : (
             data.map((employee, index) => (
-              <tr key={index} className="border-b border-gray-300">
+              <tr key={index} className="border-b border-gray_10">
                 <td className="pl-6 p-2">
                   <Image
                     src={employee.urlImg}
                     alt={employee.name}
                     width={40}
                     height={40}
-                    className="rounded-full h-10"
+                    className="rounded-full h-10 object-cover"
                   />
                 </td>
                 <td className="p-2">{employee.name}</td>

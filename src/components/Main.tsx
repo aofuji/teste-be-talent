@@ -61,20 +61,25 @@ export default function Main() {
 
   return (
     <>
-      <div className={`flex  p-5 mb-3 mt-2 ${isMobile ?'flex-col justify-start items-start' :'justify-between items-center'} `}>
-        <h1 className={`${isMobile && 'mb-4'}`}>Funcionários</h1>
-        <div className={`${isMobile ? 'relative w-full' : 'relative w-64'}`}>
+      <div
+        className={`flex  p-5 mb-3 mt-2 ${
+          isMobile
+            ? "flex-col justify-start items-start"
+            : "justify-between items-center"
+        } `}
+      >
+        <h1 className={`${isMobile && "mb-4"}`}>Funcionários</h1>
+        <div className={`${isMobile ? "relative w-full" : "relative w-64"}`}>
           <Search onSearchChange={handleSearchChange} />
         </div>
-        
       </div>
 
       {isMobile ? (
-        <Suspense fallback={<SkeletonTable />}>
+        <Suspense fallback={<SkeletonTable isMobile={true} />}>
           <MobileList data={filteredEmployees} />
         </Suspense>
       ) : (
-        <Suspense fallback={<SkeletonTable />}>
+        <Suspense fallback={<SkeletonTable isMobile={false} />}>
           <List data={filteredEmployees} />
         </Suspense>
       )}

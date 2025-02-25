@@ -21,7 +21,7 @@ const MobileList = ({ data }: { data: Array<Employee> }) => {
     <div className="pr-5 pl-5">
       <table className="w-full">
         <thead>
-          <tr className="bg-blue-700 text-white uppercase">
+          <tr className="bg-blue_primary text-white uppercase">
             <th className="pl-6 p-2 text-left rounded-tl-xl">foto</th>
             <th className="p-2 text-left">nome</th>
             <th className="p-2 text-center rounded-tr-xl">
@@ -40,7 +40,7 @@ const MobileList = ({ data }: { data: Array<Employee> }) => {
             data.map((employee, index) => (
               <React.Fragment key={index}>
                 <tr
-                  className={`border-b border-gray-300 cursor-pointer ${expandedRows[index] ? 'border-b-0' : ''}`}
+                  className={`border-b border-gray_10 cursor-pointer ${expandedRows[index] ? 'border-b-0' : ''}`}
                   onClick={() => handleRowClick(index)}
                 >
                   <td className="pl-6 p-2">
@@ -49,7 +49,7 @@ const MobileList = ({ data }: { data: Array<Employee> }) => {
                       alt={employee.name}
                       width={40}
                       height={40}
-                      className="rounded-full h-10"
+                      className="rounded-full h-10 object-cover"
                     />
                   </td>
                   <td className="p-2">{employee.name}</td>
@@ -63,12 +63,12 @@ const MobileList = ({ data }: { data: Array<Employee> }) => {
                   </td>
                 </tr>
                 {expandedRows[index] && (
-                  <tr className="border-b border-gray-300">
+                  <tr className="border-b border-gray_10">
                     <td colSpan={3} className="p-2">
                       <div className="p-2 bg-white">
-                        <p className="flex justify-between border-b-2 border-dotted border-gray-100 "><strong>Cargo</strong> {employee.position}</p>
-                        <p className="flex justify-between border-b-2 border-dotted border-gray-100"><strong>Data de Admissão</strong> {formatDate(employee.admissionDate)}</p>
-                        <p className="flex justify-between border-b-2 border-dotted border-gray-100"><strong>Telefone</strong> {formatPhone(employee.phone)}</p>
+                        <p className="flex justify-between border-b-2 border-dotted border-gray_10 "><strong>Cargo</strong> {employee.position}</p>
+                        <p className="flex justify-between border-b-2 border-dotted border-gray_10"><strong>Data de Admissão</strong> {formatDate(employee.admissionDate)}</p>
+                        <p className="flex justify-between border-b-2 border-dotted border-gray_10"><strong>Telefone</strong> {formatPhone(employee.phone)}</p>
                       </div>
                     </td>
                   </tr>
