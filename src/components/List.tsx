@@ -9,7 +9,7 @@ const List = ({ data }: { data: Array<Employee>}) => {
   return (
     <div className="pr-5 pl-5">
       <table className="min-w-full">
-        <thead className="rounded-t-xl">
+        <thead>
           <tr className="bg-blue-700 text-white uppercase">
             <th className="pl-6 p-2 text-left rounded-tl-xl">foto</th>
             <th className="p-2 text-left">nome</th>

@@ -12,7 +12,7 @@ const Search = ({ onSearchChange }: Search) => {
   };
 
   return (
-    <div className="relative w-64">
+    <>
       <input
         type="text"
         placeholder="Pesquisar"
@@ -27,7 +27,7 @@ const Search = ({ onSearchChange }: Search) => {
         height={20}
         className="absolute right-3 top-2.5 w-5 h-5"
       />
-    </div>
+    </>
   );
 };
 

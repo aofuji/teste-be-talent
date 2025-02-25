@@ -9,7 +9,9 @@ import dynamic from "next/dynamic";
 import SkeletonTable from "./SkeletonTable";
 // lazy loading
 const List = dynamic(() => import("../components/List"), { ssr: false });
-const MobileList = dynamic(() => import("../components/MobileList"), { ssr: false });
+const MobileList = dynamic(() => import("../components/MobileList"), {
+  ssr: false,
+});
 
 export default function Main() {
   const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -59,13 +61,18 @@ export default function Main() {
 
   return (
     <>
-      <div className="flex justify-between items-center p-5 mb-3 mt-2">
-        <h1>Funcionários</h1>
-        <Search onSearchChange={handleSearchChange} />
+      <div className={`flex  p-5 mb-3 mt-2 ${isMobile ?'flex-col justify-start items-start' :'justify-between items-center'} `}>
+        <h1 className={`${isMobile && 'mb-4'}`}>Funcionários</h1>
+        <div className={`${isMobile ? 'relative w-full' : 'relative w-64'}`}>
+          <Search onSearchChange={handleSearchChange} />
+        </div>
+        
       </div>
 
       {isMobile ? (
-        <MobileList data={filteredEmployees} />
+        <Suspense fallback={<SkeletonTable />}>
+          <MobileList data={filteredEmployees} />
+        </Suspense>
       ) : (
         <Suspense fallback={<SkeletonTable />}>
           <List data={filteredEmployees} />
