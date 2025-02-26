@@ -74,6 +74,8 @@ O Json-server sera iniciado pode ser acessado em http://localhost:3001/employees
 └── tsconfig.json
 ```
 
+6. Adicionado variaveis globais das cores no arquivo `tailwind.config.ts` e no arquivo `global.css`
+
 ### Scripts Disponiveis
 
 - dev: Inicia o servidor de desenvolvimento. 
