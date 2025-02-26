@@ -76,5 +76,5 @@ O Json-server sera iniciado pode ser acessado em http://localhost:3001/employees
 
 ### Scripts Disponiveis
 
-     - dev: Inicia o servidor de desenvolvimento. 
-     * json-server: Inicia o json-server.
+- dev: Inicia o servidor de desenvolvimento. 
+* json-server: Inicia o json-server.
