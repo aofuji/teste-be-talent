@@ -45,7 +45,7 @@ const MobileList = ({ data }: { data: Array<Employee> }) => {
                 >
                   <td className="pl-6 p-2">
                     <Image
-                      src={employee.urlImg}
+                      src={employee.image}
                       alt={employee.name}
                       width={40}
                       height={40}
@@ -66,8 +66,8 @@ const MobileList = ({ data }: { data: Array<Employee> }) => {
                   <tr className="border-b border-gray_10">
                     <td colSpan={3} className="p-2">
                       <div className="p-2 bg-white">
-                        <p className="flex justify-between border-b-2 border-dotted border-gray_10 "><strong>Cargo</strong> {employee.position}</p>
-                        <p className="flex justify-between border-b-2 border-dotted border-gray_10"><strong>Data de Admissão</strong> {formatDate(employee.admissionDate)}</p>
+                        <p className="flex justify-between border-b-2 border-dotted border-gray_10 "><strong>Cargo</strong> {employee.job}</p>
+                        <p className="flex justify-between border-b-2 border-dotted border-gray_10"><strong>Data de Admissão</strong> {formatDate(employee.admission_date)}</p>
                         <p className="flex justify-between border-b-2 border-dotted border-gray_10"><strong>Telefone</strong> {formatPhone(employee.phone)}</p>
                       </div>
                     </td>

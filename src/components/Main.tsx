@@ -51,7 +51,7 @@ export default function Main() {
       const searchLower = newSearch.toLowerCase();
       return (
         employee.name.toLowerCase().includes(searchLower) ||
-        employee.position.toLowerCase().includes(searchLower) ||
+        employee.job.toLowerCase().includes(searchLower) ||
         employee.phone.toLowerCase().includes(searchLower)
       );
     });

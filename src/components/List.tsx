@@ -28,7 +28,7 @@ const List = ({ data }: { data: Array<Employee>}) => {
               <tr key={index} className="border-b border-gray_10">
                 <td className="pl-6 p-2">
                   <Image
-                    src={employee.urlImg}
+                    src={employee.image}
                     alt={employee.name}
                     width={40}
                     height={40}
@@ -36,8 +36,8 @@ const List = ({ data }: { data: Array<Employee>}) => {
                   />
                 </td>
                 <td className="p-2">{employee.name}</td>
-                <td className="p-2">{employee.position}</td>
-                <td className="p-2">{formatDate(employee.admissionDate)}</td>
+                <td className="p-2">{employee.job}</td>
+                <td className="p-2">{formatDate(employee.admission_date)}</td>
                 <td className="p-2">{formatPhone(employee.phone)}</td>
               </tr>
             ))

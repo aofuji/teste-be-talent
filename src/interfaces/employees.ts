@@ -1,8 +1,8 @@
 export interface Employee {
     id: number;
     name: string;
-    position: string;
-    admissionDate: string;
+    job: string;
+    admission_date: string;
     phone: string;
-    urlImg: string;
+    image: string;
 }
