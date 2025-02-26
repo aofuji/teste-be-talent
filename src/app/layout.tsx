@@ -5,7 +5,6 @@ import { roboto } from "@/utils/fonts";
 import Header from "@/components/Header";
 import QueryProvider from "@/core/query-provider";
 
-
 export const metadata: Metadata = {
   title: "Teste BeTalent",
   description: "Teste BeTalent",
@@ -18,12 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${roboto} antialiased`}
-      >
+      <body className={`${roboto} antialiased`}>
         <QueryProvider>
-        <Header />
-          {children}</QueryProvider>
+          <Header />
+          {children}
+        </QueryProvider>
       </body>
     </html>
   );
