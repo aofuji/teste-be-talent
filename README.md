@@ -37,7 +37,7 @@ Certifique-se de ter os seguintes requisitos instalados em sua máquina:
 4. Executando JSON-SERVER
     ```bash
     npm run json-server
-    ````
+    ```
 O servidor de desenvolvimento será iniciado e você poderá acessar o projeto em http://localhost:3000 \
 O Json-server sera iniciado pode ser acessado em http://localhost:3001/employees
 
