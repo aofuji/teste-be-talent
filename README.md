@@ -74,6 +74,7 @@ O Json-server sera iniciado pode ser acessado em http://localhost:3001/employees
 └── tsconfig.json
 ```
 
-Scripts Disponiveis
-    dev: Inicia o servidor de desenvolvimento.
+### Scripts Disponiveis
+
+    dev: Inicia o servidor de desenvolvimento. \
     json-server: Inicia o json-server.
