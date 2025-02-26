@@ -47,7 +47,7 @@ export default function Main() {
   }, [queryEmployees.isSuccess, queryEmployees.data]);
 
   const handleSearchChange = (newSearch: string) => {
-    const filtered = initEmployees?.filter((employee) => {
+    const filtered = initEmployees.filter((employee) => {
       const searchLower = newSearch.toLowerCase();
       return (
         employee.name.toLowerCase().includes(searchLower) ||
