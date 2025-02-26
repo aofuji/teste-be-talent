@@ -1,7 +1,9 @@
 import { Employee } from "@/interfaces/employees";
 
 const fetcher = (url: string): Promise<Employee[]> => {
-  return fetch(url)
+  return fetch(url, {
+    method: "GET",
+  })
     .then((res) => {
       if (!res.ok) {
         throw new Error("Resposta da rede não foi boa");
