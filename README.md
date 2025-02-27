@@ -25,7 +25,9 @@ Certifique-se de ter os seguintes requisitos instalados em sua máquina:
     yarn install
     ```
 
-3. Executando o Projeto
+3. Alterar o arquivo `env.example` para `.env`
+
+4. Executando o Projeto
 
     ```bash
     npm run dev
@@ -34,14 +36,14 @@ Certifique-se de ter os seguintes requisitos instalados em sua máquina:
     ```bash
     yarn dev
     ```
-4. Executando JSON-SERVER
+5. Executando JSON-SERVER
     ```bash
     npm run json-server
     ```
 O servidor de desenvolvimento será iniciado e você poderá acessar o projeto em http://localhost:3000 \
 O Json-server sera iniciado pode ser acessado em http://localhost:3001/employees
 
-5. estrutura do projeto
+6. estrutura do projeto
 ```
 ├── src
 │   ├── app
@@ -74,7 +76,7 @@ O Json-server sera iniciado pode ser acessado em http://localhost:3001/employees
 └── tsconfig.json
 ```
 
-6. Adicionado variaveis globais das cores no arquivo `tailwind.config.ts` e no arquivo `global.css`
+7. Adicionado variaveis globais das cores no arquivo `tailwind.config.ts` e no arquivo `global.css`
 
 ### Scripts Disponiveis
 

@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders component List 1`] = `
+<div>
+  <div
+    class="pr-5 pl-5"
+  >
+    <table
+      class="min-w-full"
+    >
+      <thead>
+        <tr
+          class="bg-blue_primary text-white uppercase"
+        >
+          <th
+            class="pl-6 p-2 text-left rounded-tl-xl"
+          >
+            foto
+          </th>
+          <th
+            class="p-2 text-left"
+          >
+            nome
+          </th>
+          <th
+            class="p-2 text-left"
+          >
+            cargo
+          </th>
+          <th
+            class="p-2 text-left"
+          >
+            data de admissão
+          </th>
+          <th
+            class="p-2 text-left rounded-tr-xl"
+          >
+            telefone
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="border bg-white"
+      >
+        <tr>
+          <td
+            class="text-center p-2"
+            colspan="5"
+          >
+            Nenhum funcionário encontrado.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`renders component Mobile List 1`] = `
+<div>
+  <div
+    class="pr-5 pl-5"
+  >
+    <table
+      class="w-full"
+    >
+      <thead>
+        <tr
+          class="bg-blue_primary text-white uppercase"
+        >
+          <th
+            class="pl-6 p-2 text-left rounded-tl-xl"
+          >
+            foto
+          </th>
+          <th
+            class="p-2 text-left"
+          >
+            nome
+          </th>
+          <th
+            class="p-2 text-center rounded-tr-xl"
+          >
+            <span
+              class="inline-block h-2 w-2 bg-white rounded-full"
+            />
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="border bg-white"
+      >
+        <tr>
+          <td
+            class="text-center p-2"
+            colspan="3"
+          >
+            Nenhum funcionário encontrado.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
