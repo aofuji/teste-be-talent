@@ -1,8 +1,7 @@
 import { render } from "@testing-library/react";
 
-import { expect, it } from "@jest/globals";
-import List from "../List";
-import MobileList from "../MobileList";
+import List from "@/components/List";
+import MobileList from "@/components/MobileList";
 
 it("renders component List", () => {
   const { container } = render(<List data={[]} />);
